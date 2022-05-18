@@ -29,3 +29,14 @@ dataframe = pd.DataFrame(
     np.random.randn(10, 12),
     columns=('col %d' % i for i in range(12)))
 st.table(dataframe)
+
+
+# // Checkboxes to show and hide data
+
+st.title("Checkbox to display Data")
+if st.checkbox('Show dataframe'):
+    chart_data = pd.DataFrame(
+       np.random.randn(20, 3),
+       columns=['a', 'b', 'c'])
+
+    chart_data
